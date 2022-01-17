@@ -17,16 +17,12 @@ public class OnsOracleDbKafkaConsumer {
     OrderMapper orderMapper;
 
     @KafkaListener(topics = "${k.topic.consumer.name}")
-    public void listener(Order order){
-        System.out.println("C2");
-        inserter(order);
-    }
-
     @Mapper
-    public void inserter(Order order){
+    public void listener(Order order){
         logger.info(order.toString());
         orderMapper.insertOrder(order);
     }
+
 
 
 }

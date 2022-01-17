@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.manifestcorp.onsoracledb.dao.OrderMapper">
     <insert id="insertOrder" parameterType="com.manifestcorp.onsdomain.Order">
-        insert into messages(shipping_id, order_id, line1, line2, city, state, zip, product_id, description, quantity)
+        insert into messages(shippingId, orderId, line1, line2, city, state, zip, product_id, description, quantity)
         values (#{shippingId}, #{orderId}, #{line1}, #{line2}, #{city}, #{state}, #{zip}, #{product_id}, #{description}, #{quantity})
     </insert>
 </mapper>
